@@ -1,10 +1,4 @@
-print('hello world!')
-a=100
+def application(environ, start_response):
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    return [b'<h1>Hello, web!</h1>']
 
-# 等等
-if a>=0:
-    print(a)
-else:
-    print(-a)
-
-    
