@@ -1,6 +1,6 @@
-import  socket
+import  socket1
 #创建一个socket:
-s = socket.socket(socket.AF_INET,socket.SOCK_STERAM)
+s = socket1.socket1(socket1.AF_INET, socket1.SOCK_STERAM)
 #建立连接:
 s.connect(('www.sina.com.cn', 80))
 # 发送数据:
@@ -23,7 +23,7 @@ print(header.decode('utf-8'))
 with open('sina.html', 'wb') as f:
     f.write(html)
 #服务器
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket1.socket1(socket1.AF_INET, socket1.SOCK_STREAM)
 # 监听端口:
 s.bind(('127.0.0.1', 9999))
 #调用listen()方法开始监听端口，传入的参数指定等待连接的最大数量：
@@ -49,7 +49,7 @@ def tcplink(sock, addr):
     sock.close()
     print('Connection from %s:%s closed.' % addr)
 #客户端
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket1.socket1(socket1.AF_INET, socket1.SOCK_STREAM)
 # 建立连接:
 s.connect(('127.0.0.1', 9999))
 # 接收欢迎消息:
